@@ -12,10 +12,6 @@ class Api::V1::ItemsController < ApplicationController
     Item.create(item_params)
   end
 
-  def update
-    Item.find(params[:id]).update_attributes(item_params)
-  end
-
   def destroy
     Item.delete(params[:id])
   end

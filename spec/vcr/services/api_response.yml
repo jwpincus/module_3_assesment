@@ -12,7 +12,7 @@ http_interactions:
   response:
     status:
       code: 200
-      message: 
+      message:
     headers:
       access-control-allow-headers:
       - origin, x-requested-with, accept
@@ -48,6 +48,6 @@ http_interactions:
         Box","distance":9.79},{"longName":"BEST BUY - LITTLETON","city":"LAKEWOOD","phone":"303-932-7830","storeType":"Big
         Box","distance":10.44},{"longName":"BEST BUY - SOUTHGLENN","city":"CENTENNIAL","phone":"303-797-3246","storeType":"Big
         Box","distance":11.02}],"warnings":"Distances are in terms of miles (default)"}'
-    http_version: 
+    http_version:
   recorded_at: Thu, 01 Jun 2017 17:19:19 GMT
 recorded_with: VCR 3.0.3
