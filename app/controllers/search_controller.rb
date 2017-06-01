@@ -1,5 +1,7 @@
 class SearchController < ApplicationController
   def index
-    @stores = StoreFetcher.new.get_store(params[:zip])
+    fetched = StoreFetcher.new
+    @stores = fetched.get_store(params[:zip])
+    @number_of_stores = fetched.number_of_stores
   end
 end
