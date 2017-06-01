@@ -2,6 +2,7 @@ require 'rails_helper'
 
 describe 'As a user when I visit /' do
   it "And I fill in a search box with '80202' and click 'search'" do
+    VCR.use_cassette "services/api_response"
     visit '/'
     fill_in 'zip', with: "80202"
     click_on 'search'
