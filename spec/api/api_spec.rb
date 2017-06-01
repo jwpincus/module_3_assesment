@@ -14,6 +14,19 @@ describe 'When using the API' do
     body = JSON.parse(response.body)
     expect(body.count).to eq(Item.count)
   end
+  it 'GET request to api/v1/items/:id' do
+    item = Item.create(name: "item",
+                description: "some text",
+                image_url: "https://placehold.it/300x300.png/000")
+
+    Item.create(name: "item2",
+                description: "some more text",
+                image_url: "https://placehold.it/300x300.png/000")
+    get "/api/v1/items/#{item.id}"
+    expect(response).to be_succes
+    body = JSON.parse(response.body)
+    expect(body['name']).to eq(item.name)
+  end
 end
 # We need an API for the application that can both read and write data. Start by focusing on functionality for items. All of this should happen in a dedicated, versioned controller.
 #

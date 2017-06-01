@@ -9,7 +9,7 @@ class Api::V1::ItemsController < ApplicationController
   end
 
   def create
-    Item.create(destination_params)
+    Item.create(item_params)
   end
 
   def update
