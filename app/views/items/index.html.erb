@@ -5,6 +5,11 @@
     </div>
   </div>
   <div class="row"></div>
+  <%= form_tag '/search', method: :get do  %>
+    <%= text_field_tag 'zip' %>
+    <%= button_tag 'search' %>
+  <% end %>
+
   <% @items.each do |item| %>
     <div class="col-sm-3">
       <h5><%= item.name %></h5>
@@ -15,4 +20,3 @@
     </div>
   <% end %>
 </div>
-

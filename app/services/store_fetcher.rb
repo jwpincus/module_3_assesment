@@ -8,11 +8,12 @@ class StoreFetcher
   end
 
   def get_raw(zip)
-    Faraday.get("").body
+    Faraday.get("https://api.bestbuy.com/v1/stores((area(80202,10)))?apiKey=#{ENV['api_key']}&show=longName,city,phone,storeType,distance&format=json").body
   end
 
   def parser(json)
+    binding.pry
     parsed = JSON.parse(json)
-    parsed = parsed[]
+    parsed = parsed
   end
 end
