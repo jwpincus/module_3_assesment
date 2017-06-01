@@ -9,7 +9,7 @@ class SearchController < ApplicationController
   private
 
   def check_zip(zip = params[:zip])
-    if zip[/^\d{5}(-\d{4})?$/].nil?
+    if zip[/^\d{5}$/].nil?
       flash[:alert] = 'Please use a valid zip'
       redirect_to '/'
     end
