@@ -1,4 +1,4 @@
-require 'rails-helper'
+require 'rails_helper'
 
 describe 'When using the API' do
   it 'GET request to api/v1/items' do
