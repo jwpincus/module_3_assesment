@@ -4,11 +4,11 @@ class Prettifier
   end
 
   def name
-    "Name: #{@store['longName']}"
+    "Name: #{@store['longName'].titleize}"
   end
 
   def city
-    "City: #{@store['city']} F"
+    "City: #{@store['city'].titleize} F"
   end
 
   def phone
