@@ -18,4 +18,11 @@ describe 'As a user when I visit /' do
       end
     end
   end
+  it "User uses invalid zip and gets a flash to go elswhere" do
+    visit '/'
+    fill_in 'zip', with: "1"
+    click_on 'search'
+    expect(current_path).to eq('/')
+    expect(page).to have_content('Please use a valid zip')
+  end
 end
